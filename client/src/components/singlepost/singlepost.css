@@ -1,0 +1,128 @@
+.singlePost {
+    flex: 9;
+}
+
+.singlePostWrapper {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.singlePostImg {
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+    object-fit: contain;
+}
+
+.singlePostTitle {
+    text-align: center;
+    margin: 10px;
+    font-size: 28px;
+    font-family: "Lora", sans-serif;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.singlePostTitleInput {
+    text-align: center;
+    font-size: 28px;
+    font-family: "Lora", sans-serif;
+    text-transform: uppercase;
+    border: none;
+    border-bottom: 1px solid lightgray;
+}
+
+.singlePostTitleInput:focus {
+    outline: none;
+}
+
+.singlePostEdit {
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    max-width: 10%;
+    margin-left: 45%;
+}
+
+.singlePostIcon {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.singlePostIcon:first-child {
+    color: teal;
+}
+
+.singlePostIcon:last-child {
+    color: tomato;
+}
+
+.singlePostInfo {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    color: #be9656;
+    font-family: "Varela Round", Arial, Helvetica, sans-serif;
+}
+
+.singlePostAuthor {
+    margin-left: 5px;
+}
+
+.singlePostDesc {
+    color: #666;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.singlePostDescInput {
+    color: #666;
+    font-size: 18px;
+    line-height: 25px;
+    border: none;
+}
+
+.singlePostDescInput:focus {
+    outline: none;
+}
+
+.singlePostDesc::first-letter {
+    margin-left: 20px;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.singlePostButton {
+    border: none;
+    background-color: teal;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.writeButton button {
+    color: white;
+    background-color: teal;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: background-color .3s linear;
+}
+
+.writeButton button:hover {
+    background-color: rgb(3, 106, 106);
+}
+
+@media(max-width:500px) {
+    .singlePostWrapper {
+        padding: 0px;
+    }
+}

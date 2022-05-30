@@ -1,0 +1,63 @@
+.ffrow {
+    /* font-size: 20px; */
+    font-family: 'Roboto Mono', monospace;
+}
+
+.ffrow a {
+    text-decoration: underline;
+}
+
+.ffrow a:hover {
+    color: #fff;
+}
+
+.ffooter {
+    border-top: 1px solid rgb(79, 79, 79);
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.ffooter .frow {
+    width: 100%;
+    margin: 1% 0%;
+    padding: 0.6% 0%;
+    color: rgb(79, 79, 79);
+    font-size: 0.8em;
+}
+
+.ffooter .frow a {
+    text-decoration: none;
+    color: rgb(79, 79, 79);
+    transition: 0.5s;
+}
+
+.ffooter .frow a:hover {
+    color: rgb(0, 0, 0);
+}
+
+.ffooter .frow ul {
+    width: 100%;
+}
+
+.ffooter .frow ul li {
+    display: inline-block;
+    margin: 0px 30px;
+}
+
+.ffooter .frow a {
+    font-size: 1.5em;
+    margin: 0% 1%;
+}
+
+@media (max-width:500px) {
+    .ffooter .frow ul li {
+        display: block;
+        margin: 10px 0px;
+        text-align: left;
+    }
+    .ffooter .frow a {
+        margin: 0% 3%;
+    }
+}
