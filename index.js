@@ -16,29 +16,29 @@ app.use(express.json());
 app.use("/images", express.static(path.join(__dirname, "/images")));
 
 mongoose
-  .connect(process.env.MONGO_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    // useFindAndModify: true,
-    // useCreateIndex: true,
-  })
-  .then(console.log("Connected to mongo"))
-  .catch((err) => console.log(err));
+    .connect(process.env.MONGO_URL, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        // useFindAndModify: true,
+        // useCreateIndex: true,
+    })
+    .then(console.log("Connected to mongo"))
+    .catch((err) => console.log(err));
 
 // store images in images folder
 const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, "images");
-  },
-  filename: (req, file, cb) => {
-    cb(null, req.body.name);
-  },
+    destination: (req, file, cb) => {
+        cb(null, "images");
+    },
+    filename: (req, file, cb) => {
+        cb(null, req.body.name);
+    },
 });
 
 // upload here
 const upload = multer({ storage: storage });
 app.post("/api/upload", upload.single("file"), (req, res) => {
-  res.status(200).json("File uploaded");
+    res.status(200).json("File uploaded");
 });
 // no need for sep route file for image uploads, direct api req
 app.use("/api/auth", authRoute);
@@ -51,12 +51,12 @@ app.use("/api/categories", categoryRoute);
 app.use(express.static(path.join(__dirname, "/client/build")));
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
+    res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
 });
 // app.use("/", (req, res) => {
 //   console.log("Backend url");
 // });
 
 app.listen(process.env.PORT || 5000, () => {
-  console.log("Backend is running");
+    console.log("Backend is running");
 });

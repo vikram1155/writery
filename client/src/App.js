@@ -44,3 +44,8 @@ function App() {
 }
 
 export default App;
+
+
+// use this in client's package.json
+
+// "proxy": "http://localhost:5000/api/"
