@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <div className="header" id="about">
       <div className="headerTitles">
-        <h2>MERN APP || Blog writing app</h2>
+        <h2>MERN APP || Writery || Blog writing app</h2>
         <ul>
           <li>
             <b>M</b> - MONGODB (Document database)
